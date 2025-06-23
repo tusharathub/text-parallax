@@ -11,7 +11,7 @@ import { useEffect, useRef } from 'react';
 
 export default function Home() {
 
-  const container = useRef();
+  const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start end', 'end start']
@@ -20,7 +20,7 @@ export default function Home() {
   useEffect( () => {
     const lenis = new Lenis()
 
-    function raf(time) {
+    function raf(time:any) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
@@ -42,7 +42,7 @@ export default function Home() {
   );
 }
 
-const Slide = (props) => {
+const Slide = (props: any) => {
   const direction = props.direction == 'left' ? -1 : 1;
   const translateX = useTransform(props.progress, [0, 1], [150 * direction, -150 * direction])
   return (
@@ -54,11 +54,11 @@ const Slide = (props) => {
   )
 }
 
-const Phrase = ({src}) => {
+const Phrase = ({src} :any) => {
 
   return (
     <div className={'px-5 flex gap-5 items-center'}>
-      <p className='text-[7.5vw]'>Front End Developer</p>
+      <p className='text-[7.5vw]'>안녕하세요</p>
       <span className="relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden">
         <Image style={{objectFit: "cover"}} src={src} alt="image" fill/>
       </span>
