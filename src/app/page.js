@@ -20,7 +20,7 @@ export default function Home() {
   useEffect( () => {
     const lenis = new Lenis()
 
-    function raf(time:any) {
+    function raf(time) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
@@ -42,7 +42,7 @@ export default function Home() {
   );
 }
 
-const Slide = (props: any) => {
+const Slide = (props) => {
   const direction = props.direction == 'left' ? -1 : 1;
   const translateX = useTransform(props.progress, [0, 1], [150 * direction, -150 * direction])
   return (
@@ -54,7 +54,7 @@ const Slide = (props: any) => {
   )
 }
 
-const Phrase = ({src} :any) => {
+const Phrase = ({src} ) => {
 
   return (
     <div className={'px-5 flex gap-5 items-center'}>
