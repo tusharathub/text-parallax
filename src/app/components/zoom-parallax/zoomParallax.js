@@ -7,7 +7,6 @@ import Picture4 from "../../../../public/images/4.jpg";
 import Picture5 from "../../../../public/images/5.jpg";
 import Picture6 from "../../../../public/images/6.jpg";
 import Picture7 from "../../../../public/images/7.jpg";
-import Picture8 from "../../../../public/images/8.jpg";
 import Image from "next/image";
 import { useScroll, useTransform, motion} from 'framer-motion';
 import { useRef } from "react";
