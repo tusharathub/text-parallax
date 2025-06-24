@@ -40,7 +40,7 @@ const Section1 = ({scrollYProgress}) => {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, -5])
   return (
     
-    <motion.div style={{scale, rotate}} className="sticky top-0 h-screen bg-[#C72626] text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
+    <motion.div style={{scale, rotate}} className="sticky top-0 h-screen bg-gray-500 text-[3.5vw] flex flex-col items-center justify-center text-white pb-[10vh]">
         
       <p>Scroll Perspective</p>
       <div className="flex gap-4">
